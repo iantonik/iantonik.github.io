@@ -1,0 +1,23 @@
+.name{
+    font-weight: bold;
+    font-size: large;
+}
+h2{
+    margin: 20px;
+}
+.project-pic{
+    max-width: 100%;
+
+}
+.project-title{
+    display: block;
+    background-color: #777a81;
+    color: whitesmoke;
+    line-height: 50px;
+
+
+}
+.project{
+    margin: 20px;
+    text-align: center;
+}
