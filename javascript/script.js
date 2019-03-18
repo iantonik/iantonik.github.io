@@ -15,7 +15,7 @@ var qualifications = [
             {
                 title: "Star Wars RPG",
                 hostedURL: "https://iantonik.github.io/unit-4-game/index.html",
-                projImg: "images/devProjects/starWars.png",
+                projImg: "images/devProjects/starWars.jpeg",
                 gitHub: "https://github.com/iantonik/unit-4-game",
             },
             {
