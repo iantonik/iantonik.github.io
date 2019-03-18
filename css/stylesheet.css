@@ -27,7 +27,7 @@
 .profile{
     position: absolute;
     text-align: center;
-    top: 200px;
+    top: 15%;
 }
 
 .imgContainer{
@@ -73,6 +73,10 @@
     text-align: center !important;
    
     
+}
+.introBox{
+    position: relative;
+    padding: 0;
 }
 .card {
     display: inline-block;
