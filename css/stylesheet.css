@@ -27,7 +27,7 @@
 .profile{
     position: absolute;
     text-align: center;
-    top: 20%;
+    top: 200px;
 }
 
 .imgContainer{
@@ -36,7 +36,7 @@
 
 .backgroundImage{
     display: block;
-    max-width: 100%;
+    width: 100%;
     /* position: absolute; */
     left: 0;
     z-index: -1;
