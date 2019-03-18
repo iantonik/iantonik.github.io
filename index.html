@@ -3,138 +3,287 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Athiti|Carrois+Gothic+SC" rel="stylesheet">
 
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
 
-
-    <link rel="icon" href="assets/images/bumblebee.jpg">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-
-    <title>Iwona Antonik</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>Document</title>
 </head>
 
 <body>
-
-
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+    <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Iwona Antonik</a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-        </div>
-    </nav>
-
-
-    <div class="container">
-        <div class="row shadow-lg p-3 mb-5 mt-5 bg-gray rounded">
-            <div class="col-3">
-                <img src="assets/images/profile_pic.jpg" class="img-fluid max-width: 100% rounded">
-            </div>
-
-            <div class="col-9 intro-content">
-                <p>
-                    <span class="name">Iwona Antonik</span> is a transformational leader with diverse skills and
-                    intuition
-                    borne from over a decade of experience. She enables organizations to deliver high-quality products,
-                    services and technology, while using approaches that foster a collaborative, transparent and
-                    sustainable culture. She herself embodies her belief in cross-functional pollination, by ensuring
-                    that she is competent in the latest trends in technology, management, and development techniques
-                    for organizations large and small.
-                </p>
-                <ul>
-                    <li>Agile Transfomration Leader</li>
-                    <li>Product Manager</li>
-                    <ul>
-                        <li>Design Thinking</li>
-                        <li>Systems Thinking</li>
-                        <li>Digital Transformation - Integration of Artificial Intelligence</li>
-                    </ul>
-                    <li>Full Stack Software Developer</li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" onclick="homePage()" style="cursor: pointer;">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="showResume()" style="cursor: pointer;">View Resume</a>
+                    </li>
                 </ul>
 
-            </div>
+                <div class="form-inline my-2 my-lg-0">
 
+                    <button type="button" class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal"
+                        data-target="#exampleModalCenter">Contact
+                        Me</button>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <!-- <section class="bg-center bg-no-repeat py-3 mt-lg-3" id="intro">
+        <div class="shadow">
+            <img class="backgroundImage" src="images/profile_background.png">
+        </div>
+
+
+    </section> -->
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Contact Me</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="https://mailthis.to/iwona.antonik@gmail.com" method="POST"
+                        encType="multipart/form-data">
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <textarea type="text" class="form-control" name="message"
+                                    placeholder="Enter message"></textarea>
+                            </div>
+                        </div>
+                        <input type="hidden" name="_confirmation" value="Message has been sent.">
+
+                        <div class="modal-footer">
+                            <button type="submit" value="Send" class="btn btn-secondary" data-dismiss="modal">Send
+                                Message</button>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row shadow-lg p-3 mb-5 mt-5 bg-gray rounded">
-            <div class="col-12">
-                <h2>Software Development Projects</h2>
+
+
+    <section class="competency" id="competency">
+        <div class="container">
+            <h3 class="block-text px-3">Product Development<br>From Concept to Customer</h3>
+
+            <div class="row qualifications">
+
             </div>
+        </div>
+
+    </section>
+    <section class="devProjects" id="devProjects">
+        <div class="container">
+            <h3 class="block-text px-3">Software Development Projects</h3>
+            <div class="row" id="projectDiv">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section class="resume" id="resumeDiv">
+        <div class="container">
+            <div class="row ">
+                <div class="name sectionHeader col-6">Iwona Antonik </div>
+                <div class="cridentials sectionHeader col-6">MBA, PMP, CSM, CSPO, SPC, PSM</div>
+                <div class="contactInfo col-12">
+                    <p>New York, NY 10010 • 732.266.1371 • iwona.antonik@gmail.com</p>
+                </div>
+            </div>
+
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-3 project">
-                    <a href="https://iantonik.github.io/Word-Guess-Game/index.html"> <img
-                            class="img-fluid project-pic img-thumbnail" src="assets/images/hangman.png"
-                            alt="Word Guess Game" />
-                        <div class="project-title">Word Guess Game</div>
-                    </a>
+                <div class="sectionHeader">Summary</div>
+                <div class="summary">
+                    Iwona is a transformational leader with diverse skills and intuition borne from over a decade of
+                    experience.
+                    She enables organizations to deliver high-quality products, services and technology, while using
+                    approaches
+                    that foster a collaborative, transparent and sustainable culture. She herself embodies her belief in
+                    cross-functional pollination, by ensuring that she is competent in the latest trends in technology,
+                    management, and development techniques for organizations large and small.
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 project">
-                    <a href="https://iantonik.github.io/unit-4-game/index.html"> <img
-                            class="img-fluid project-pic img-thumbnail" src="assets/images/StarWars.png"
-                            alt="Star Wars RPG" />
-                        <div class="project-title">Star Wars RPG</div>
-                    </a>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 project">
-                    <a href="https://iantonik.github.io/TriviaGame/"> <img
-                            class="img-fluid project-pic img-thumbnail" src="assets/images/trivia.jpeg"
-                            alt="Totally Trivial Trivia!" />
-                        <div class="project-title">Totally Trivial Trivia!</div>
-                    </a>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 project">
-                    <a href="https://iantonik.github.io/GifTastic/"> <img
-                            class="img-fluid project-pic img-thumbnail" src="assets/images/GifTastic.jpeg"
-                            alt="GifTastic" />
-                        <div class="project-title">GifTastic</div>
-                    </a>
-                </div>
-
             </div>
 
+            <div class="row">
+                <div class="sectionHeader">Core Competincies</div>
+                <div>Design Thinking • Lean-Agile Principles • Agile Scrum • Kanban • SAFe • Roadmap Planning • Fiscal
+                    Management • Process Definition and Improvement • Training • DevOps</div>
+            </div>
+
+            <div class="row">
+                <div class="sectionHeader">Certifications / Education</div>
+                <div>
+                    <ul>
+                        <li>Full-Stack Developer, Columbia University, 2019 </li>
+                        <li>MIT Sloan School of Management – Executive Program</li>
+                        <ul>
+                                <li>Artificial Intelligence: Implications for Business Strategy, 2018</li>
+                                <li>Mastering Design Thinking, 2018</li>
+                        </ul>
+                        <li>Professional Scrum Master, Scrum.org, 2017</li>
+                        <li>Scaled Agile Framework (SAFe) Program Consultant, Scaled Agile Academy, 2015</li>
+                        <li>Certified Scrum Product Owner, Scrum Alliance, 2015</li>
+                        <li>Project Management Professional, PMI, 2011 </li>
+                        <li>Certified Scrum Master, Scrum Alliance, 2009</li>
+                        <li>Master of Business Administration, University of Phoenix, 2007</li>
+                        <li>Bachelor of Science in Business Management, University of Phoenix, 2006</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="sectionHeader">Experiance</div>
+                <div class="job">
+                    <div class="row jobheading">
+                            <div class="position col-sm-12 col-md-4">Agile Coach</div>
+                            <div class="company col-sm-12 col-md-4">BNY Mellon Agile Transformation Office</div>
+                            <div class="duration col-sm-12 col-md-4">July 2016 – Present</div>
+                    </div>
+
+
+                    <div class="positionSummary">Partner in organization-wide transformation initiative </div>
+                    <div class="experianceDetails">
+                        <ul>
+                            <li>Defined a transformation approach which promoted executing pilots across all business
+                                lines to
+                                identify organizational challenges, and encourage acceptance of Agile practices.</li>
+                            <li>oached teams, Scrum Masters, Product Owners, Managers and Executives on Agile values and
+                                principles to promote continuous improvement.</li>
+                            <li>Mentored teams, leading them to be self-organizing with strong accountability, decision
+                                making,
+                                conflict resolution and transparency.</li>
+                            <li>Developed and administered Agile maturity assessments of the teams, as well as
+                                management.</li>
+                            <li>Established and supported communities of practices to promote organizational
+                                understanding of
+                                Agile roles and to help individuals develop into them.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="job">
+                    <div class="row jobheading">
+                            <div class="position col-sm-12 col-md-4 ">Agile Coach</div>
+                            <div class="company col-md-4 col-sm-12">BNY Mellon Enterprise Risk</div>
+                            <div class="duration col-md-4 col-sm-12">March 2015 - June 2016</div>
+
+                    </div>
+
+                    <div class="positionSummary">Led an adoption of Scaled Agile Framework (SAFe) across Enterprise Risk
+                        organization of BNY Mellon.</div>
+                    <div class="experianceDetails">
+                        <ul>
+                            <li>Coached leaders and teams through the adoption of Scaled Agile Framework. Provided
+                                necessary
+                                training and references to enable the ideal management and team structures.</li>
+                            <li>Conducted training courses for Scrum Masters, Product Owners and teams related to agile
+                                best
+                                practices, understanding and improving team dynamics and team performance.</li>
+                            <li>Defined reporting standards at the team and LOB level utilizing agile metrics.</li>
+                            <li>Instituted and facilitated continuous improvement sessions with cross-functional
+                                management team
+                                to drive adoption of DevOps practices.</li>
+                            <li>Established and facilitated communities of practice to promote sustainability of the
+                                adoption.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
         </div>
-    </div>
+
+
+    </section>
 
 
 
 
 
 
-    <footer class="page-footer font-small">
-        <div class="footer-copyright text-center py-3">© 2019 Copyright: Luna Phi Inc.
-        </div>
-    </footer>
 
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
-
-
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
 
 </html>
