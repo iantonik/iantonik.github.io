@@ -8,6 +8,30 @@
 
 }
 
+.btn-outline-success {
+    color: purple;
+    border-color: purple;
+}
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: purple;
+    border-color: purple;
+}
+.btn-outline-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(167, 40, 167, 0.5);
+}
+.btn-secondary {
+    color: #fff;
+    background-color: purple;
+    border-color: purple;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: rgb(65, 10, 65);
+    border-color: rgb(65, 10, 65);
+}
+
 .fill {
     display: flex;
     justify-content: center;
@@ -47,19 +71,22 @@
 }
 .social-media{
     text-decoration: none;
-    text-decoration-color: black;
     font-size: 3rem;
 
 }
+.social-media a:hover{
+    color: rgb(26, 5, 26);
+}
+
+.social-media a{
+    color: purple;
+}
+
 
 .profile-image{
-    box-shadow: 0 0 5px 10px #555;
+    box-shadow: 0 0 5px 10px lightgray;
 }
 
-.experiance{
-    
-
-}
 .competency{
     font-family: 'Archivo Black', sans-serif;
     margin-top: 100px;
@@ -127,12 +154,21 @@
 }
 
 .proj-card-title{
-    color: black;
     text-decoration: none;
     text-align: center;
     margin-top: 0;
     margin-bottom: 3px;
 }
+
+.proj-card-title a:hover{
+    color: rgb(26, 5, 26);
+}
+
+.proj-card-title a{
+    color: purple;
+}
+
+
 
 .card-description {
     text-align: center;
@@ -166,7 +202,7 @@ body text: font-family: 'Athiti', sans-serif; */
     font-family: 'Carrois Gothic SC', sans-serif;
     display: block;
     width: 100%;
-    border-bottom: double;
+    border-bottom: double purple;
     line-height: 200%;
 
 }
@@ -189,4 +225,9 @@ body text: font-family: 'Athiti', sans-serif; */
 
 #resumeDiv{
     display: none;
+}
+
+.card-project .card-image img{
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
 }

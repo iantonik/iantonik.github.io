@@ -34,7 +34,7 @@ var qualifications = [
                 title: "Weather Appropriate",
                 hostedURL: "https://iantonik.github.io/The-Weather-Appropriate-Clothing/index.html",
                 projImg: "images/devProjects/weather-clothing.jpg",
-                gitHub: "https://github.com/iantonik/The-Weather-Appropriate-Clothing/index.html",
+                gitHub: "https://github.com/iantonik/The-Weather-Appropriate-Clothing",
             }
 
 
@@ -128,7 +128,6 @@ var showResume = function () {
     $("#competency").hide();
     $("#devProjects").hide();
     $("#resumeDiv").show();
-    $('.navbar-collapse').collapse('hide');
 }
 
 var homePage = function () {
