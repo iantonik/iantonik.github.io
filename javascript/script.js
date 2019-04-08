@@ -35,6 +35,12 @@ var qualifications = [
                 hostedURL: "https://iantonik.github.io/The-Weather-Appropriate-Clothing/index.html",
                 projImg: "images/devProjects/weather-clothing.jpg",
                 gitHub: "https://github.com/iantonik/The-Weather-Appropriate-Clothing",
+            },
+            {
+                title: "CLI Bamazon",
+                hostedURL: "",
+                projImg: "images/devProjects/bamazon.jpg",
+                gitHub: "https://github.com/iantonik/Bamazon"
             }
 
 
