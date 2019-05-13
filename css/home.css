@@ -1,0 +1,67 @@
+.intro-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1f0327;
+
+  }
+
+  .icon {
+    height: 2rem;
+  }
+
+
+  .hexagon {
+    position: absolute;
+    width: 600px; 
+    height: 200px;
+    background-color: #efeaee;
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+    border-left: solid 5px #671033;
+    border-right: solid 5px #671033;
+    opacity: .9;
+
+  }
+  
+  .hexagon:before,
+  .hexagon:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 424.26px;
+    height: 424.26px;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+    left: 82.8680px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+  }
+  
+  .hexagon:before {
+    top: -212.1320px;
+    border-top: solid 7.0711px #671033;
+    border-right: solid 7.0711px #671033;
+  }
+  
+  .hexagon:after {
+    bottom: -212.1320px;
+    border-bottom: solid 7.0711px #671033;
+    border-left: solid 7.0711px #671033;
+  }
+  
+  /*cover up extra shadows*/
+  .hexagon span {
+    display: block;
+    position: absolute;
+    top:2.8867513459481287px;
+    left: 0;
+    width:590px;
+    height:190px;
+    z-index: 2;
+    background: inherit;
+    padding-top: 25px;
+
+  }

@@ -1,0 +1,25 @@
+.text-background {
+    background-color: rgba(251,248,249,.9);
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+    border: solid 5px #671033;
+    color: #1f0327;
+    padding: 5%;
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    /* color: #999; */
+}
+
+.bio-title {
+    padding-bottom: 30px;
+}
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

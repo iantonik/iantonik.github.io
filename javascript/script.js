@@ -41,6 +41,13 @@ var qualifications = [
                 hostedURL: "",
                 projImg: "images/devProjects/bamazon.jpg",
                 gitHub: "https://github.com/iantonik/Bamazon"
+            },
+            {
+                title: "FlexTrainer",
+                hostedURL: "https://obscure-journey-41831.herokuapp.com",
+                projImg: "images/devProjects/FlexTrainer.jpeg",
+                gitHub: "https://github.com/iantonik/TeamProject2"
+
             }
 
 
@@ -67,35 +74,6 @@ var qualifications = [
         // desc: "...."
     },
 ]
-
-
-var populateQualifications = function () {
-    qualifications.forEach(experiance => {
-        var projInfo = qualifications.projects;
-
-        $(".qualifications").append(
-
-            `<div class="col-md-6 col-lg-4" >
-                    <div class="card card-product">
-                        <div class="card-image">
-                            
-                            <img class=img src="${experiance.expImg}">
-                        
-                        </div>
-                        <div class="card-content">
-                            <h4 class="card-title">
-                                <a>${experiance.title}</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-        </div>`)
-        
-
-    });
-
-
-}
 
 var populateDevProjects = function () {
     var projects = qualifications[0].projects
@@ -124,28 +102,18 @@ var populateDevProjects = function () {
 }
 
 
-
-$("#resume").click(function () {
-
-});
-
-var showResume = function () {
-    $("#intro").hide();
-    $("#competency").hide();
-    $("#devProjects").hide();
-    $("#resumeDiv").show();
-}
-
-var homePage = function () {
-    $("#intro").show();
-    $("#competency").show();
-    $("#devProjects").show();
-    $("#resumeDiv").hide();
-}
-
-
 $(document).ready(function () {
-    populateQualifications();
+    $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+    });
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+
     populateDevProjects();
 });
+
 
